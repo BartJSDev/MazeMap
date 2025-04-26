@@ -2,8 +2,12 @@
 
 A fully animated maze generation and pathfinding visualizer built with vanilla JavaScript and HTML5 canvas. Supports **Depth-First Maze Generation**, **A* Pathfinding**, and **Dead-End Filling** with smooth, real-time visual feedback.
 
-Astar
+Maze generation
+
 ![src](https://github.com/user-attachments/assets/0c5be1fc-f02f-4056-af36-5faa3cae817b)
+
+A*
+
 ![src1](https://github.com/user-attachments/assets/3a82a0e4-7f71-4f8f-a5cd-f541c18d9001)
 
 Deadendfilling
