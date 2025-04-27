@@ -4,17 +4,18 @@ let c = canvas.getContext("2d")
 canvas.width = innerWidth * devicePixelRatio
 canvas.height = innerHeight * devicePixelRatio
 
-let SIZE = 40
-let COLS, ROWS
+let COLS, ROWS , SIZE
 
 if (window.innerWidth > 768) {
     // Desktop
-    COLS = 35;
-    ROWS = 35;
+    COLS = 45;
+    ROWS = 45;
+    SIZE = 30
 } else {
     // Mobiel
     COLS = 21;
     ROWS = 21;
+    SIZE = 40
 }
 
 let OFFSETX = (canvas.width - (COLS * SIZE)) / 2
