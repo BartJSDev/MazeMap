@@ -47,9 +47,9 @@ function Deadendfilling(){
             return
         }
 
-        if(neighbors.length === 1){
 
-            neighbors[0].deadend = true
+        if (getOpenNeighbors(current_node.row, current_node.col).length === 0) {
+            current_node.deadend = true;
         }
 
         if(pending.length > 0){
