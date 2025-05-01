@@ -25,7 +25,8 @@ function CreateMaze() {
 
                 console.log("Maze generation complete.");
                 //Astar()
-                Deadendfilling()
+                //Deadendfilling()
+                toggleMenu()
                 return;
             }
         }

@@ -4,22 +4,28 @@ let c = canvas.getContext("2d")
 canvas.width = innerWidth * devicePixelRatio
 canvas.height = innerHeight * devicePixelRatio
 
-let COLS, ROWS , SIZE
+let COLS, ROWS, SIZE, OFFSETX, OFFSETY , HEIGHT
+let nav = document.querySelector("nav")
+let menu = document.querySelector(".menu")
+let mouseclick = true
 
 if (window.innerWidth > 768) {
     // Desktop
-    COLS = 45;
-    ROWS = 45;
-    SIZE = 30
+    COLS = 35;
+    ROWS = 35;
+    SIZE = 40
+    HEIGHT = nav.offsetHeight 
+    OFFSETX = (canvas.width - (COLS * SIZE)) / 2
+    OFFSETY = (canvas.height - (ROWS * SIZE) - HEIGHT) / 2 + HEIGHT
 } else {
     // Mobiel
-    COLS = 21;
-    ROWS = 21;
+    COLS = 25;
+    ROWS = 25;
     SIZE = 40
+    HEIGHT = nav.offsetHeight 
+    OFFSETX = (canvas.width - (COLS * SIZE)) / 2
+    OFFSETY = (canvas.height -  (ROWS * SIZE) - HEIGHT) / 2 + HEIGHT * 2
 }
-
-let OFFSETX = (canvas.width - (COLS * SIZE)) / 2
-let OFFSETY = (canvas.height - (ROWS * SIZE)) / 2
 
 //maze variables
 let maze = []
@@ -163,7 +169,7 @@ function DrawDeadfilling() {
 
                 c.beginPath();
                 c.fillStyle = "rgba(255,102,178,.7)";
-                c.rect(node.x - SIZE / 2, node.y  - SIZE / 2, SIZE , SIZE);
+                c.rect(node.x - SIZE / 2, node.y - SIZE / 2, SIZE, SIZE);
                 c.fill();
                 c.closePath();
             }
@@ -172,7 +178,7 @@ function DrawDeadfilling() {
 
                 c.beginPath();
                 c.fillStyle = "rgba(153,0,76,1)";
-                c.rect(node.x - SIZE / 2, node.y  - SIZE / 2, SIZE , SIZE);
+                c.rect(node.x - SIZE / 2, node.y - SIZE / 2, SIZE, SIZE);
                 c.fill();
                 c.closePath();
             }
@@ -185,7 +191,7 @@ function DrawDeadfilling() {
 
         c.beginPath();
         c.fillStyle = "rgba(0,255,0,.4)";
-        c.rect(node.x - SIZE / 2, node.y  - SIZE / 2, SIZE , SIZE);
+        c.rect(node.x - SIZE / 2, node.y - SIZE / 2, SIZE, SIZE);
         c.fill();
         c.closePath();
     })
@@ -194,39 +200,46 @@ function DrawDeadfilling() {
 
 canvas.addEventListener("click", function (e) {
 
-    clearTimeout(mazeTimeout)
-    currentnode = undefined
-    stack = []
-    path = []
-    current = null
-    openset = []
-    closedset = []
-    console.log("Maze (re)started.");
-    pathAnimating = true
-    route = []
-    CreateGrid()
-    CreateMaze();
+    if(mouseclick){
+
+        clearTimeout(mazeTimeout)
+        currentnode = undefined
+        stack = []
+        path = []
+        current = null
+        openset = []
+        closedset = []
+        console.log("Maze (re)started.");
+        pathAnimating = true
+        route = []
+        CreateGrid()
+        CreateMaze();
+    }
+  
 
 })
 
 canvas.addEventListener("touchstart", function (e) {
 
-    clearTimeout(mazeTimeout)
-    currentnode = undefined
-    stack = []
-    path = []
-    current = null
-    openset = []
-    closedset = []
-    console.log("Maze (re)started.");
-    pathAnimating = true
-    route = []
-    CreateGrid()
-    CreateMaze();
+    if(mouseclick){
+
+        clearTimeout(mazeTimeout)
+        currentnode = undefined
+        stack = []
+        path = []
+        current = null
+        openset = []
+        closedset = []
+        console.log("Maze (re)started.");
+        pathAnimating = true
+        route = []
+        CreateGrid()
+        CreateMaze();
+    }
 
 })
 
-document.getElementById("export").addEventListener("click", function () {
+function export_img() {
 
     const dataURL = canvas.toDataURL("image/png");
 
@@ -235,8 +248,17 @@ document.getElementById("export").addEventListener("click", function () {
     link.download = "maze.png";
     link.href = dataURL;
     link.click();
-});
+
+}
 
 window.addEventListener('resize', () => {
     location.reload(); // herlaadt de pagina zodat alles opnieuw wordt opgebouwd
 });
+
+function toggleMenu() {
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}

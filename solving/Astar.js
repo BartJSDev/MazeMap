@@ -1,4 +1,8 @@
 function Astar() {
+    
+    toggleMenu()
+
+    mouseclick = false
 
     startnode.g = 0
     startnode.h = heuristic(startnode, endnode)

@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="layout.css">
 </head>
+
 <body>
-    <button id="export">Export as PNG</button>
-    <div id="hint">Click to start</div>
-    <div class="title">MazeMap</div>
-    <div class="info">A project that visualizes both maze generation and pathfinding in real time.</div>
+    <nav>
+        <div class="title">MazeMapper</div>
+        <div class="info">MazeMapper is an interactive tool that generates and solves mazes using visual algorithms like A* and Dead-End Filling.</div>
+        <div class="menu">
+            <a href="#" onclick="Astar()">Astar</a>  - 
+            <a href="#" onclick="Deadendfilling()">Deadendfilling</a> -
+            <a href="#" onclick="export_img()">export as image</a>
+        </div>
+    </nav>
     <canvas></canvas>
     <script src="classes/node.js"></script>
     <script src="maze.js"></script>
@@ -19,4 +26,5 @@
     <script src="solving/Astar.js"></script>
     <script src="solving/deadendfilling.js"></script>
 </body>
+
 </html>

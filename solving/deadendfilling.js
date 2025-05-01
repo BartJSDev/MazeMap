@@ -21,6 +21,10 @@ function getOpenNeighbors(row, col) {
 
 function Deadendfilling(){
 
+    toggleMenu()
+
+    mouseclick = false
+
     let start = Getnode(1,0);
     let end = Getnode(ROWS - 2, COLS - 1)
     let pending = []
