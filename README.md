@@ -39,7 +39,7 @@ Deadendfilling
 
 ## 📦 Usage
 
-https://bartjsdev.github.io/MazeMap/
+https://bartjsdev.github.io/MazeMapper/
 
 
 ### 1. Clone the repo
