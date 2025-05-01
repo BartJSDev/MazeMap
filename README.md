@@ -1,4 +1,4 @@
-# 🧩 Maze Visualizer
+# 🧩 MazeMapper
 
 A fully animated maze generation and pathfinding visualizer built with vanilla JavaScript and HTML5 canvas. Supports **Depth-First Maze Generation**, **A* Pathfinding**, and **Dead-End Filling** with smooth, real-time visual feedback.
 
