@@ -22,7 +22,7 @@ body {
 
 }
 
-nav{
+nav {
 
     background-color: rgb(47, 47, 54);
     position: absolute;
@@ -30,7 +30,7 @@ nav{
     z-index: 5;
 }
 
-nav .title{
+nav .title {
 
     text-align: center;
     font-size: xx-large;
@@ -39,12 +39,13 @@ nav .title{
     text-shadow: 5px 5px black;
 }
 
-nav .info{
+nav .info {
 
     text-align: center;
     font-size: large;
     padding-top: 10px;
     padding-bottom: 10px;
+
 }
 
 nav .menu {
@@ -54,51 +55,61 @@ nav .menu {
     padding-bottom: 10px;
 }
 
-nav a{
+nav button {
 
-    font-size: smaller;
+    font-size: large;
     text-decoration: none;
-    color: yellow;
+    color: rgb(0, 0, 0);
+    border: none;
+    background-color: rgb(229, 240, 26);
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-nav .menu{
+nav .menu {
 
-    display: none;
+    display:none;
 }
 
 
 /* mobile */
 @media (max-width: 600px) {
 
-    nav .title{
+    nav .title {
 
         text-align: center;
         font-size: xx-large;
         text-shadow: 5px 5px black;
     }
-    
-    nav .info{
-    
+
+    nav .info {
+
         text-align: center;
         font-size: large;
-       
+
     }
-    
+
     nav .menu {
-    
+
         text-align: center;
-    
+
     }
-    
-    nav a{
-    
-        font-size: smaller;
+
+    nav button {
+
+        font-size: large;
         text-decoration: none;
-        color: yellow;
+        color: rgb(0, 0, 0);
+        border: none;
+        background-color: rgb(229, 240, 26);
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
     }
-    
-    nav .menu{
-    
+
+    nav .menu {
+
         display: none;
     }
 

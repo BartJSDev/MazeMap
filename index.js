@@ -200,6 +200,8 @@ function DrawDeadfilling() {
 
 canvas.addEventListener("click", function (e) {
 
+    menu.style.display = "none";
+
     if(mouseclick){
 
         clearTimeout(mazeTimeout)
@@ -220,6 +222,8 @@ canvas.addEventListener("click", function (e) {
 })
 
 canvas.addEventListener("touchstart", function (e) {
+
+    menu.style.display = "none";
 
     if(mouseclick){
 
