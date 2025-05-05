@@ -4,15 +4,16 @@ A fully animated maze generation and pathfinding visualizer built with vanilla J
 
 Maze generation
 
-![1](https://github.com/user-attachments/assets/003f7edd-1978-4295-91f5-d77bf9ddeac1)
+![screenshot1](https://github.com/user-attachments/assets/2fc71630-0a9d-40fe-8a22-7bd0aec515f4)
+![screenshot2](https://github.com/user-attachments/assets/7acaa12a-a715-4613-b231-d3143bb1d4ab)
 
 A*
 
-![3](https://github.com/user-attachments/assets/09ff9e25-38cb-4516-95ef-8f47b1332ed5)
+![screenshot3](https://github.com/user-attachments/assets/20cb8f16-4f01-4cad-89bb-21c85d491cd5)
 
 Deadendfilling
 
-![2](https://github.com/user-attachments/assets/a63711f1-e1d7-4409-8853-48771bb4065b)
+![screenshot4](https://github.com/user-attachments/assets/883108bc-be9f-4c32-b28c-e2e681940c85)
 
 
 ---
